@@ -80,7 +80,7 @@ int min(int arr[], int size)
    
     for(int i=0; i<size2; i++)
     {
-       if(mod == mods[i])
+       if(mod == counts[i])
           c=i;
     }
     return c;
