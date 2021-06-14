@@ -55,12 +55,12 @@ int min(int arr[], int size)
    int count = 0;
     int mod =0;
     int c =0;
-   for(int i =0;arr[i]<sizeof(arr); i++)
+   for(int i =0;counts[i]<sizeof(counts)/sizeof(int); i++)
        {
          counts[i] = i;
          
        }
-   for(int i =0; i<sizeof(counts); i++)
+   for(int i =0; i<sizeof(counts)/sizeof(int); i++)
    {
      for(int j =0; j<size; j++)
      {
@@ -72,9 +72,9 @@ int min(int arr[], int size)
      }
      
      
-      mod = max(sizeof(counts), counts);
+      mod = max(sizeof(counts)/sizeof(int), counts);
    }
-    for(int i=0; i<sizeof(counts); i++)
+    for(int i=0; i<sizeof(counts)/sizeof(int); i++)
     {
        if(mod == arr[i])
           c=i;
