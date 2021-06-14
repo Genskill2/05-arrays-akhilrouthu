@@ -52,11 +52,12 @@ int min(int arr[], int size)
  int mode(int arr[], int size)
  {
    int counts [max(arr , size)];
+    size_t size2 = 0;
    int count = 0;
         size2 = max(arr,size) + 1;
     int mods [size2];
     int mod =0;
-    size_t size2 = 0;
+    
     int c =0;
 
    for(int i =0;i<=max(arr,size); i++)
