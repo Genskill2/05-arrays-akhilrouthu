@@ -54,6 +54,7 @@ int min(int arr[], int size)
    int counts [max(arr , size)];
    int count = 0;
     int mod =0;
+    size_t size2 = 0;
     int c =0;
     size2 = max(arr,size) + 1;
    for(int i =0;i<=max(arr,size); i++)
