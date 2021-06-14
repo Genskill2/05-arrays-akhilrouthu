@@ -53,10 +53,12 @@ int min(int arr[], int size)
  {
    int counts [max(arr , size)];
    int count = 0;
+        size2 = max(arr,size) + 1;
+    int mods [size2];
     int mod =0;
     size_t size2 = 0;
     int c =0;
-    size2 = max(arr,size) + 1;
+
    for(int i =0;i<=max(arr,size); i++)
        {
          counts[i] = i;
@@ -70,11 +72,11 @@ int min(int arr[], int size)
         {
            count++;
         }
-        counts[i] = count;
+        mods[i] = count;
      }
      
      
-      mod = max(counts,size2);
+      mod = max(mods,size2);
    }
     for(int i=0; i<size2; i++)
     {
