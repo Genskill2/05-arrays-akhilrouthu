@@ -75,10 +75,10 @@ int min(int arr[], int size)
         }
         mods[i] = count;
      }
-     
+   } 
      
       mod = max(mods,size2);
-   }
+   
     for(int i=0; i<size2; i++)
     {
        if(mod == arr[i])
