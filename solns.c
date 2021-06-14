@@ -72,7 +72,7 @@ int min(int arr[], int size)
      }
      
      
-      mod = max(sizeof(counts)/sizeof(int), counts);
+      mod = max(counts,sizeof(counts)/sizeof(int));
    }
     for(int i=0; i<sizeof(counts)/sizeof(int); i++)
     {
