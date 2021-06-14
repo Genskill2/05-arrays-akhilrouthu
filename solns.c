@@ -60,7 +60,7 @@ int min(int arr[], int size)
     
     int c =0;
 
-   for(int i =0;i<=max(arr,size); i++)
+   for(int i =0;i<size2; i++)
        {
          counts[i] = i;
          
@@ -71,10 +71,10 @@ int min(int arr[], int size)
      {
         if(counts[i] == arr[j])
         {
-           count++;
+           count = count++;
         }
-        mods[i] = count;
      }
+        mods[i] =count; 
    } 
       mod = max(mods,size2);
    
