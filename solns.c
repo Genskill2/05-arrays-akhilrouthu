@@ -8,50 +8,50 @@ int mode(int [], int);
 int factors(int, int []);
 
 
-int max(int arr[], int size)
-{
-   int a = arr[0];
-  for(int i =0; i<size; i++)
-  {
-     
-    
-      if(a < arr[i])
-        a = arr[i];
-      
+int max (int z[],int n){
+  int max_so_far =z[0];
+  for(int i=0;i<n;i++){
+    if(z[i]>max_so_far)
+      max_so_far =z[i];
   }
-  return a;
+  return(max_so_far);
 }
 
-int min(int arr[], int size)
-{  
-     int a = arr[0];
-      for(int i =0; i<size; i++)
-  {
-     
-    
-      if(a > arr[i])
-        a = arr[i];
-      
+int min (int z[],int n){
+  int min_so_far =z[0];
+  for(int i=0;i<n;i++){
+    if(z[i]<min_so_far)
+      min_so_far =z[i];
   }
-  return a;
+  return(min_so_far);
 }
 
+float average (int z[],int n){
+  float sum=0;
+  for(int i=0;i<n;i++){
+    sum+=z[i];
+  }
+  int x= sum;
+  float avg = (float) x/n ;
+  return(avg);
+}
+int factors (int n, int z[]){
+  int x=2,i=0;
+  while(n!=1){
+    if (n%x==0){
+      while(n%x==0){
+        z[i]=x;
+        i++;
+        n=(n/x);
+      }
+    }
+    x++;
+    }
+  return (i);
+}
 
- float average(int arr[], int size)
- {
-     float avg = 0;
-     float total = 0;
-     for(int i =0; i<size; i++)
-     {
-       total+= arr[i];
-     }
-     avg = total/size;
-   return avg;
- }
-
- int mode(int arr[], int size)
- {
-    int a=0,b=0;
+int mode (int z[] ,int n){
+  int a=0,b=0;
   for(int i=0;i<n;++i){
     int c=0;
     for(int j=0;j<n;++j){
@@ -64,23 +64,4 @@ int min(int arr[], int size)
     }
   }
   return(b);
- }
-
-   
- int factors(int size, int arr[])
- {
-    int x=2,i=0;
-  while(n!=1){
-    if (n%x==0){
-      while(n%x==0){
-        z[i]=x;
-        i++;
-        n=(n/x);
-      }
-    }
-    x++;
-    }
-  return (i);
-   
- }
-
+}
