@@ -51,49 +51,36 @@ int min(int arr[], int size)
 
  int mode(int arr[], int size)
  {
-   int counts [max(arr , size)];
-    size_t size2 =  max(arr,size)+1;
-   int count = 0;
-    int mods [size2];
-    int mod =0;
-    int c =0;
-
-   for(int i =0;i<size2; i++)
-       {
-         counts[i] = i;
-       }
-   for(int i =0; i<size2; i++)
-   {
-     for(int j =0; j<size; j++)
-     {
-        if(counts[i] == arr[j])
-        {
-           count = count++;
-        }
-     }
-        mods[i] =count; 
-   } 
-      mod = max(mods,size2);
-   
-    for(int i=0; i<size2; i++)
-    {
-       if(mod == mods[i])
-          c=i;
+    int a=0,b=0;
+  for(int i=0;i<n;++i){
+    int c=0;
+    for(int j=0;j<n;++j){
+      if(z[j]==z[i])
+        c++;
     }
-    return c;
+    if(c>a){
+      a =c;
+      b = z[i];
+    }
+  }
+  return(b);
  }
 
-
-   
-   
-   
-   
-   
-   
    
  int factors(int size, int arr[])
  {
-   
+    int x=2,i=0;
+  while(n!=1){
+    if (n%x==0){
+      while(n%x==0){
+        z[i]=x;
+        i++;
+        n=(n/x);
+      }
+    }
+    x++;
+    }
+  return (i);
    
  }
 
